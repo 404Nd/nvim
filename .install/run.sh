@@ -219,10 +219,10 @@ function finish () {
 
 function setup() {
   msg "${BOLD}Installing telescope-fzf-native...${NC}" 1
-  git clone https://github.com/nvim-telescope/telescope-fzf-native.nvim /tmp/telescope-fzf-native.nvim
-  rm -rf /tmp/telescope-fzf-native.nvim/.git
-  cp -r /tmp/telescope-fzf-native.nvim "$PACK_DIR/packer/start/packer.nvim"
-  rm -rf /tmp/telescope-fzf-native.nvim
+  git clone https://github.com/nvim-telescope/telescope-fzf-native.nvim $HOME/telescope-fzf-native.nvim
+  rm -rf $HOME/telescope-fzf-native.nvim/.git
+  cp -r $HOME/telescope-fzf-native.nvim "$PACK_DIR/packer/start/packer.nvim"
+  rm -rf $HOME/telescope-fzf-native.nvim
   [ -d "$PACK_DIR/packer/start/packer.nvim/telescope-fzf-native.nvim" ] && msg "${BOLD}${GREEN}Done${NC}" 1 0
   [ ! -d "$PACK_DIR/packer/start/packer.nvim/telescope-fzf-native.nvim" ] && msg "${BOLD}${RED}Error while installing telescope-fzf-native... Aborting" 1 && exit
 
